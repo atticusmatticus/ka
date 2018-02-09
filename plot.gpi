@@ -1,0 +1,13 @@
+set encoding utf8
+set term png size 800,600 enhanced
+set xrange[1:21]
+#set yrange[4:11]
+set xlabel 'Center of Mass Distance [{\305}]'
+
+set ylabel 'g(r)'
+set output "exp_free_energy.png"
+plot 'exp_free_energy.out' not, 1 not
+
+set ylabel 'Free Energy [kcal/mol]'
+set output "free_energy.png"
+plot 'free_energy.out' not, 0 not
